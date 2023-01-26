@@ -1,0 +1,61 @@
+<div class="main-container row mb-3">
+    <div class="col col-lg-7 my-4">
+        <div class="main-title justify-content-lg-start">
+            <h1 class="text-light ms-lg-5">Contacto del Doctor</h1>
+            <div class="main-logo d-none d-lg-block">
+                <svg aria-hidden="true" focusable="false" width="64" height="64" fill="currentColor" data-prefix="fas" data-icon="user-md" class="svg-inline--fa fa-user-md fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zM104 424c0 13.3 10.7 24 24 24s24-10.7 24-24-10.7-24-24-24-24 10.7-24 24zm216-135.4v49c36.5 7.4 64 39.8 64 78.4v41.7c0 7.6-5.4 14.2-12.9 15.7l-32.2 6.4c-4.3.9-8.5-1.9-9.4-6.3l-3.1-15.7c-.9-4.3 1.9-8.6 6.3-9.4l19.3-3.9V416c0-62.8-96-65.1-96 1.9v26.7l19.3 3.9c4.3.9 7.1 5.1 6.3 9.4l-3.1 15.7c-.9 4.3-5.1 7.1-9.4 6.3l-31.2-4.2c-7.9-1.1-13.8-7.8-13.8-15.9V416c0-38.6 27.5-70.9 64-78.4v-45.2c-2.2.7-4.4 1.1-6.6 1.9-18 6.3-37.3 9.8-57.4 9.8s-39.4-3.5-57.4-9.8c-7.4-2.6-14.9-4.2-22.6-5.2v81.6c23.1 6.9 40 28.1 40 53.4 0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.3 16.9-46.5 40-53.4v-80.4C48.5 301 0 355.8 0 422.4v44.8C0 491.9 20.1 512 44.8 512h358.4c24.7 0 44.8-20.1 44.8-44.8v-44.8c0-72-56.8-130.3-128-133.8z"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="information-container mt-sm-3">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <span class="col-7"><i class='bx bxs-home bx-flip-horizontal'></i><span class="ms-2">NOMBRES Y APELLIDOS</span></span> 
+                    <span class="col-5"><%= NDOC %> </span> 
+                </li>
+                <li class="list-group-item">
+                    <span class="col-7"><svg aria-hidden="true" width="16" height="16" focusable="false" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+                        </svg><span class="ms-2">CORREO</span></span>
+                    <span class="col-5"><%= NCOR %></span> 
+                </li>
+                <li class="list-group-item">
+                    <span class="col-7"><i class='bx bxs-home bx-flip-horizontal'></i><span class="ms-2">COLEGIATURA</span></span> 
+                    <span class="col-5"><%= COLDOC %></span> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col col-lg-5 my-4 align-items-top">
+        <div class="main-title justify-content-lg-start">
+            <h1 class="text-light ms-lg-5">Historial de Citas</h1>
+            <div class="main-logo d-none d-lg-block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                    </svg>
+            </div>
+        </div>
+        <div class="information-container mt-sm-3">
+            <ul id="citas" class="list-group list-group-flush text-center">
+                <div class="list-group-item">
+                    <span class="col"><strong>Fecha</strong></span>
+                    <span class="col"><strong>Hora</strong></span>
+                    <span class="col"><strong>Estado</strong></span>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="citasList" class="d-none"><%- citasList %></div>
+<script>
+    let citasList;
+    citasList = JSON.parse(document.getElementById("citasList").innerText);
+    let citas = document.getElementById("citas");
+    for (obj of citasList) {
+        let date_time = obj.date.split("T");
+        citas.innerHTML += `<li class="list-group-item">
+        <span class="col">${date_time[0]}</span><span class="col">${date_time[1]}</span><span class="col">Por realizar</span>
+        </li>`;
+    }
+</script>

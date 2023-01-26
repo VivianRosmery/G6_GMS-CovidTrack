@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <%- include('partials/head')%>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+</head>
+<body>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <div class="container">
+        <img class ="logito" src ="https://static.wixstatic.com/media/a6ed58_5534a43660c74d59aca8d10d0beebaac~mv2.png " title = "CovidTrack" alt= "Logo de la empresa" >
+        <form action="/auth" method="POST" class="login-email">
+            <p class="login-text">Iniciar sesión</p>
+            <div class="switch-field">
+                <input type="radio" id="paciente" name="usertype" value="paciente" checked>
+                <label for="paciente">Paciente</label>
+                <input type="radio" id="doctor" name="usertype" value="doctor">
+                <label for="doctor">Doctor</label>
+            </div>
+            <div class="input-group">
+                <input id="user"  type="email" placeholder="Correo" name="usermail" value="" autocomplete="email" required>
+            </div>
+            <div class="input-group">
+                <input id="pass" type="password" placeholder="Contraseña" name="pass" value="" autocomplete="current-password" required>
+            </div>
+            <p class="passwor-redictioned"><a href="forget" class="linkolvidado">¿Te olvidaste tu contraseña?</a></p>
+            <div class="input-group">
+                <button id="submit" name="submit" class="btn">Iniciar Sesion</button>
+            </div>
+            <span id="span">
+                <p class="login-register-text">¿No tiene una cuenta? <a href="register"><i>¡Regístrate aquí!</i></a>.</p>
+            </span>
+        </form>
+    </div>
+    <script>
+        const container = document.querySelector('.container')
+        const btnPaciente = document.querySelector('#paciente');
+        const span = document.getElementById('span');
+        container.addEventListener('change', () =>{
+            if(btnPaciente.checked == true){
+                console.log('Usuario Paciente')
+                span.style.display = "block";
+                container.style.background = "rgba(73,116,116,80%)";
+            } else {
+                console.log('Usuario Doctor')
+                span.style.display = "none";
+                container.style.background = "rgba(255,64,64,80%)";
+            }
+        });
+        window.addEventListener("beforeunload", function (e) {
+            document.querySelector('.login-email').reset();
+        });
+    </script>
+</body>
+</html>
